@@ -40,6 +40,8 @@ from datetime import datetime
 
 @app.route("/commits/")
 def commits():
+    return render_template("commits.html", data=commits_count)
+
     response = requests.get("https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits")
     commits_data = response.json()
 
@@ -49,7 +51,6 @@ def commits():
         minute = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ').minute
         commits_count[minute] = commits_count.get(minute, 0) + 1
 
-    return render_template("commits.html", data=commits_count)
 
 
 if __name__ == "__main__":
