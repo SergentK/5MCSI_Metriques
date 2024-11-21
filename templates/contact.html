@@ -1,8 +1,4 @@
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Page de Contact</title>
-   <style>
+<style>
   body {
     font-family: "Arial", sans-serif;
     margin: 0;
@@ -13,12 +9,16 @@
     align-items: center;
     min-height: 100vh;
     color: #333;
+    flex-direction: column;
   }
 
   h2 {
     text-align: center;
     color: #444;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   form {
@@ -86,20 +86,18 @@
   }
 </style>
 
-  </head>
-  <body>
-    <h2>Contactez-nous</h2>
-    <form>
-      <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+<body>
+  <h2>Contactez-nous</h2>
+  <form>
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
 
-      <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom" placeholder="Votre nom">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" placeholder="Votre nom">
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Votre message"></textarea>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Votre message"></textarea>
 
-      <button type="submit">Envoyer</button>
-    </form>
-  </body>
-</html>
+    <button type="submit">Envoyer</button>
+  </form>
+</body>
