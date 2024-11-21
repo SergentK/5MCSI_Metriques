@@ -2,39 +2,90 @@
   <head>
     <meta charset="UTF-8" />
     <title>Page de Contact</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f9f9f9;
-      }
-      form {
-        max-width: 500px;
-        margin: auto;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-      input, textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #45a049;
-      }
-    </style>
+   <style>
+  body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #fda085;
+    outline: none;
+    box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+  }
+
+  button {
+    background: #fda085;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: #f6d365;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #555;
+  }
+
+  textarea {
+    resize: none;
+  }
+</style>
+
   </head>
   <body>
     <h2>Contactez-nous</h2>
