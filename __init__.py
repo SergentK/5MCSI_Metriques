@@ -35,8 +35,6 @@ def mongraphique():
 def histogramme():
     return render_template('histogramme.html')
 
-import requests
-from datetime import datetime
 
 
 
