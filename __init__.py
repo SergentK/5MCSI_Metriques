@@ -38,31 +38,6 @@ def histogramme():
 import requests
 from datetime import datetime
 
-@app.route("/commits/")
-def commits():
-    import requests
-    from flask import jsonify
-    from datetime import datetime
-
-    try:
-        # Récupérer les données depuis l'API GitHub
-        url = "https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits"
-        response = requests.get(url, timeout=10)
-        commits_data = response.json()
-
-        # Compter les commits par heure
-        commits_count = {}
-        for commit in commits_data:
-            date_string = commit["commit"]["author"]["date"]
-            date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
-            minute = date_object.strftime('%H:%M')
-            commits_count[minute] = commits_count.get(minute, 0) + 1
-
-        # Retourner les résultats en JSON
-        return jsonify(commits_count)
-
-    except Exception as e:
-        return jsonify({"error": str(e)})
 
 
 
